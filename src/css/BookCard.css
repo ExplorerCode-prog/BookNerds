@@ -1,0 +1,98 @@
+/* Book Card Styles */
+.book-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-width: 1px;
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 15px;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);  /* Slightly lifts the card */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  /* Enhanced shadow on hover */
+    border-color:#a82424 ;
+
+  }
+  
+  /* Image container */
+  .book-image {
+    position: relative;
+    width: 100%;
+    padding-top: 150%; /* Maintain aspect ratio (2:3 for book images) */
+    overflow: hidden;
+    border-bottom: 2px solid #f1f1f1;
+  }
+  
+  .book-image img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+  }
+  
+  /* Book info section */
+  .book-info {
+    padding: 15px;
+  }
+  
+  .book-info h1 {
+    font-size: 1.25rem;
+    color: #949191;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    font-family: Arial;
+    font-style:normal;
+  }
+  
+  .book-info h2 {
+    font-size: 1rem;
+    font-family: Arial;
+    font-style:normal;
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  
+  /* Hover Effects for Title and Author */
+  .book-info h1:hover {
+
+    cursor: pointer;
+  }
+  
+  .book-info h2:hover {
+    color:#333;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .book-card {
+      max-width: 45%; /* Cards will take up 45% of the container width on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .book-card {
+      max-width: 100%; /* Cards will take up 100% of the container width on mobile devices */
+    }
+  
+    .book-info h1 {
+      font-size: 1.1rem; /* Smaller font size for mobile */
+    }
+  
+    .book-info h2 {
+      font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+  }
+  

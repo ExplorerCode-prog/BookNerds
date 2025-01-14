@@ -1,0 +1,58 @@
+/* Home.css */
+.home {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .home h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: Arial;
+    font-style:normal;
+    margin-top: 25px;
+
+  }
+  
+  .book-grid {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping of items to the next line */
+    justify-content: space-evenly; /* Evenly spaces out the items */
+    gap: 20px; /* Adds space between the cards */
+    margin-top: 20px;
+  }
+  
+  .book-card {
+    flex: 0 1 calc(33.33% - 20px); /* Makes each card take up 33% of the container, minus the gap */
+    box-sizing: border-box; /* Ensures padding and margin don't affect the width */
+    max-width: 300px; /* Optional: sets a max width for the book card */
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .home h1 {
+      font-size: 1.5rem;
+    }
+  
+    .book-grid {
+      justify-content: center; /* Center the books on smaller screens */
+    }
+  
+    .book-card {
+      flex: 0 1 calc(50% - 20px); /* On smaller screens, each card will take up 50% of the width */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .book-card {
+      flex: 0 1 calc(100% - 20px); /* On very small screens, each card will take up 100% of the width */
+    }
+  }
+  

@@ -1,0 +1,136 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;  /* Spacing between brand, links, and search bar */
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #15b9d6;
+    color: white;
+    position: fixed;  /* Fixed position at the top of the page */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;  /* Ensures navbar stays on top of other content */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out;  /* Smooth background color transition */
+  }
+  
+  /* Navbar Brand */
+  .nav-brand {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;  /* Adds a more defined look */
+    transition: color 0.3s ease;
+  }
+  
+  /* Navbar Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 200px;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #c72dbf;  /* Hover effect color */
+
+  }
+  
+  /* Search Form */
+  .search-book {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-form {
+    display: flex;
+    position: relative;
+  }
+  
+  .search-input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #8052e2;
+    width: 200px;
+    border-style: solid;
+    margin-right: 10px;
+    transition: width 0.3s ease-in-out, border-color 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #51107d;  /* Highlight border color on focus */
+    outline: none;
+    width: 250px;  /* Expand input on focus */
+  }
+  
+  .search-btn {
+    padding: 10px 15px;
+    background-color: #c03ce4;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .icon {
+    width:35px;
+    border-radius:20px;
+    margin-left: 20px;
+    border-width: 4px;
+    border-color: #ad15b2;
+    
+  }
+  
+  .icon:hover {
+    border-color: #cfcbcf;
+  } 
+
+  .search-btn:hover {
+    background-color: #ad15b2;  /* Hover effect for button */
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px 15px;
+    }
+  
+    .nav-brand {
+      font-size: 1.5rem;
+    }
+  
+    .nav-links {
+      display: none;  /* Hide navigation links on small screens */
+    }
+  
+    .search-form {
+      width: 100%;
+    }
+  
+    .search-input {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .search-btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
+  /* Optional: Add a background color change on scroll */
+  .navbar.scrolled {
+    background-color: #222;  /* Darker color when scrolled */
+  }
+  

@@ -1,0 +1,101 @@
+/* General Styling for the root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+/* Styling for the logo */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms ease, transform 300ms ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Hover effects for logo */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.05); /* Slight scale effect for emphasis */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+  transform: scale(1.05);
+}
+
+/* Animation for logo spin */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card Styling */
+.card {
+  background-color: white;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);  /* Lift effect on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Text Styling for links or docs */
+.read-the-docs {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+
+.read-the-docs:hover {
+  color: #646cff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    padding: 1.5rem;  /* Adjust padding for smaller screens */
+  }
+
+  .logo {
+    height: 5em; /* Adjust logo size on smaller screens */
+  }
+
+  .card {
+    padding: 1.5em;  /* Adjust card padding */
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 4em;  /* Smaller logo on very small screens */
+  }
+
+  .card {
+    padding: 1rem;  /* Smaller card padding on very small screens */
+  }
+}
